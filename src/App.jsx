@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {useForm} from "react-hook-form";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const {
+        register,
+        formState: { errors, isValid },
+        handleSubmit,
+        reset
+    } = useForm({
+        mode: "onBlur"
+    });
+    
+    const onSubmite = (data) => {
+        console.log(JSON.stringify(data));
+        reset();
+    }
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    return (
+        <div className="App">
+            <h1>Form stepper (react-hook-form)</h1>
+
+            <form onSubmit={handleSubmit(onSubmite)}>
+                <label htmlFor='firstName'>
+                    First Name:
+                </label>
+                <input type="text"
+                    {...register('firstName',{
+                        required: "It's required!",
+                        minLength: {
+                            value:5,
+                            message:"Min 5 symbols"
+                        }
+                    })}/>
+                    <div style={{height:40}}>
+                        {errors?.firstName && <p style={{margin:0}}>{errors?.firstName?.message||"Error!"}</p>}
+                    </div>
+                <input type="submit" disabled={!isValid}/>
+            </form>
+        </div>
+    )
 }
 
 export default App
