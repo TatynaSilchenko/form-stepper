@@ -1,9 +1,7 @@
-.stepperBox {
-    height: 50%;
-}
 
 .stepperWrapper {
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .formWrapper {
@@ -11,4 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.stepperBox {
+    height: 100%;
+    padding-top: 10vh;
 }

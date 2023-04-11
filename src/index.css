@@ -82,3 +82,15 @@ button:focus-visible {
   background: radial-gradient(143.29% 115.93% at 76.95% 103.63%,rgba(247,52,0,.3) 0%,rgba(233,10,119,.3) 19.79%,rgba(23,23,23,.3) 60.33%),url('./assets/img/bg.png') no-repeat center/cover;
   background-color: #171717;
 }
+
+
+.MuiContainer-root {
+  height: 100%;
+  padding-top: 10vh;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
+}

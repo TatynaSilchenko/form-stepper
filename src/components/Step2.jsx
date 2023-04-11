@@ -45,6 +45,8 @@ const Step2 = ({title}) => {
                 )}
             />
             </div>
+            <div className={styles.errorBlock}>
+            </div>
         </FormControl>
         </>
 };

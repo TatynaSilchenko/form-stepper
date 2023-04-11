@@ -28,11 +28,7 @@ const UserForm = () => {
 
     const methods = useForm({
         defaultValues: {
-            answer1: false,
-            answer2: false,
-            answer3: false,
-            answer4: false,
-            answer5: false,
+            step1:[],
             radioButtonsGroup: "female",
         },
     });
@@ -50,7 +46,7 @@ const UserForm = () => {
     const getStepContent = (step) => {
         switch (step) {
             case 0 : {
-                return <Step1 title={questionArray[step]}/>
+                return <Step1  register={methods.register} error={methods.formState.errors} title={questionArray[step]}/>
             }
             case 1 : {
                 return <Step2 title={questionArray[step]}/>
@@ -87,7 +83,7 @@ const UserForm = () => {
                              color: '#ed8000', // circle color (ACTIVE)
                          },
                          '& .MuiStepLabel-root' : {
-                             color: 'rgba(255,255,255)', // circle color (COMPLETED)
+                             color: '#ed8000', // circle color (COMPLETED)
                          },
 
                          '& .MuiStepLabel-label.Mui-active.MuiStepLabel-alternativeLabel':

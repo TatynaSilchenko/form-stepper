@@ -1,5 +1,4 @@
 .answersBlock {
-margin-bottom: 50px;
 }
 
 .answersBlock label {
@@ -16,3 +15,13 @@ display: block;
 
     outline: none;
 }
+
+ .errorBlock {
+     color: red;
+     font-size: 20px;
+     margin: 0;
+     height: 60px;
+
+     display: flex;
+     align-items: center;
+ }
