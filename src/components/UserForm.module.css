@@ -1,0 +1,14 @@
+.stepperBox {
+    height: 50%;
+}
+
+.stepperWrapper {
+    width: 100%;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,18 @@
+.answersBlock {
+margin-bottom: 50px;
+}
+
+.answersBlock label {
+display: block;
+}
+
+.successWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+ button:hover {
+
+    outline: none;
+}
