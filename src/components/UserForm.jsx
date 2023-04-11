@@ -33,7 +33,7 @@ const UserForm = () => {
         },
     });
 
-    const questionArray = ['Choose the correct answer1?','Choose the correct answer2?']
+    const questionArray = ['Choose the correct answer?','Choose the correct answer?']
 
     const getSteps = () => {
         return [
