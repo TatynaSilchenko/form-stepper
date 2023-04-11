@@ -14,10 +14,8 @@ const styleCheck = {
 }
 
 const Step1 = ({title, register, error}) => {
-    console.log('test')
     const {control} = useFormContext();
     const onChange = (event) => {
-        debugger
         console.log('change', event.target.value);
     };
     return <>
