@@ -3,7 +3,7 @@ import {Controller, useFormContext} from "react-hook-form";
 import Checkbox from "@mui/material/Checkbox";
 import styles from './Step.module.css';
 import {FormControlLabel} from "@mui/material";
-import {pink, purple} from '@mui/material/colors';
+import {pink} from '@mui/material/colors';
 
 const styleCheck = {
     color: pink[800],
@@ -37,7 +37,7 @@ const Step1 = ({title, register, error}) => {
                                        control={control}
                                        name={"step1"}
                                        value="answer1"
-                                       onChange={onChange}
+                                       onChange={field.onChange}
                                        sx={styleCheck}
                                        {...register('step1', {
                                            required: {
@@ -64,7 +64,7 @@ const Step1 = ({title, register, error}) => {
                             <Checkbox  {...field}
                                        name={"step1"}
                                        value="answer2"
-                                       onChange={onChange}
+                                       onChange={field.onChange}
                                        sx={styleCheck}
                                        {...register('step1', {
                                            required: {
@@ -118,7 +118,7 @@ const Step1 = ({title, register, error}) => {
                             <Checkbox  {...field}
                                        name={"step1"}
                                        value="answer4"
-                                       onChange={onChange}
+                                       onChange={field.onChange}
                                        sx={styleCheck}
                                        {...register('step1', {
                                            required: {
@@ -145,7 +145,7 @@ const Step1 = ({title, register, error}) => {
                             <Checkbox  {...field}
                                        name={"step1"}
                                        value="answer5"
-                                       onChange={onChange}
+                                       onChange={field.onChange}
                                        sx={styleCheck}
                                        {...register('step1', {
                                            required: {
